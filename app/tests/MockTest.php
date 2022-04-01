@@ -13,10 +13,10 @@ class MockTest extends TestCase
 
         $mock
             ->method('sendMessage')
-            ->willReturn(true);                
-        
+            ->willReturn(true);
+
         $result = $mock->sendMessage('user@example.com', 'Hello');
-        
+
         $this->assertTrue($result);
     }
 
@@ -31,7 +31,7 @@ class MockTest extends TestCase
             ->with($this->equalTo('edwige@example.com'), $this->equalTo('Hello'))
             ->willReturn(true);
 
-         $user->setMailer($mockMailer);
+        $user->setMailer($mockMailer);
 
         $user->email = 'edwige@example.com';
         $this->assertTrue($user->notify('Hello'));
@@ -57,7 +57,7 @@ class MockTest extends TestCase
         $gateway = $this->getMockBuilder('App\PaymentGateway')
             ->setMethods(['charge'])
             ->getMock();
-            
+
         $gateway
             ->expects($this->once())
             ->method('charge')

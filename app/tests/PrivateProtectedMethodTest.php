@@ -6,7 +6,7 @@ use App\ItemChild;
 
 /**
  * Test private/protected method
- * Not really a good practice but in some cases, 
+ * Not really a good practice but in some cases,
  * it can be interesting to test private and protected methods
  */
 class PrivateProtectedMethodTest extends TestCase
@@ -44,3 +44,4 @@ class PrivateProtectedMethodTest extends TestCase
         $this->assertStringStartsWith('example', $result);
     }
 }
+

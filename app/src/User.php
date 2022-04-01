@@ -7,7 +7,7 @@ use App\Mailer;
 class User extends AbstractPerson
 {
     public $firstname;
-    
+
     public $lastname;
 
     public $email;
